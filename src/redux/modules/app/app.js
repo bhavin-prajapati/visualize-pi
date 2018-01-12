@@ -20,15 +20,15 @@ export const decrement = createAction(DECREMENT);
  */
 
 const initialState = from({
-  counter: 0
+  visualizerIndex: 0
 });
 
 export default createReducer({
   [INCREMENT]: (state) => (
-    state.merge({ counter: state.counter + 1 })
+    state.merge({ visualizerIndex: state.visualizerIndex + 1 })
   ),
 
   [DECREMENT]: (state) => (
-    state.merge({ counter: state.counter - 1 })
+    state.merge({ visualizerIndex: state.visualizerIndex - 1 })
   )
 }, initialState);

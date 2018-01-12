@@ -7,7 +7,7 @@ import { INCREMENT, DECREMENT } from '../../redux/modules/app/app';
  */
 
 function* incrementIterator() {
-  yield call(console.log, 'counter + 1');
+  yield call(console.log, 'visualizerIndex + 1');
 }
 
 function* incrementSaga() {
@@ -22,7 +22,7 @@ function* incrementSaga() {
  */
 
 function* decrementIterator() {
-  yield call(console.log, 'counter - 1');
+  yield call(console.log, 'visualizerIndex - 1');
 }
 
 function* descrementSaga() {

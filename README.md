@@ -1,6 +1,6 @@
-# Frontend static boilerplate
+# Visualize PI
 
-A simple boilerplate to create static frontend applications.
+A simple PI Visualizer to discover patterns
 
 ### Stack
 
@@ -25,8 +25,8 @@ A simple boilerplate to create static frontend applications.
 
 ### Example
 
-Source code contains an example of a simple counter that is in the application store. To demonstrate side-effects during actions, a console.log when is firing.
+Source code contains a static website of a PI Visualizer
 
 ______________________________
 
-[Jincor Tech](https://github.com/JincorTech)
+[Jincor Tech](https://github.com/bhavin-prajapati)
