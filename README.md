@@ -29,4 +29,4 @@ Source code contains a static website of a PI Visualizer
 
 ______________________________
 
-[Jincor Tech](https://github.com/bhavin-prajapati)
+[Bhavin Prajapati](https://github.com/bhavin-prajapati)
