@@ -16,7 +16,7 @@ const projectName = 'visualize-pi';
 
 const output = {
   path: path.resolve('docs'),
-  publicPath: `/${projectName}`,
+  publicPath: `/${projectName}/`,
   filename: 'bundle.js'
 };
 

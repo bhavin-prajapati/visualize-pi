@@ -17,7 +17,7 @@ const projectName = 'visualize-pi';
 
 const output = {
   path: path.resolve('docs'),
-  publicPath: `/${projectName}`,
+  publicPath: `/${projectName}/`,
   filename: '[name].[chunkhash].js'
 };
 
