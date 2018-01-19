@@ -16,7 +16,7 @@ const projectName = 'visualize-pi';
 
 const output = {
   path: path.resolve('docs'),
-  publicPath: `/${projectName}/`,
+  publicPath: `/${projectName}`,
   filename: 'bundle.js'
 };
 
@@ -94,7 +94,10 @@ const webpackModule = {
     {
       test: /\.(ttf|otf|eot|svg|woff2?)(\?.+)?$/,
       loader: 'url-loader',
-      options: { limit: 10000 }
+      options: {
+        limit: 1000, // if less than 10 kb, add base64 encoded image to css
+        name: `${projectName}/[hash].[ext]` // if more than 10 kb move to this folder in build using file-loader
+      }
     },
     {
       test: /\.(jpe?g|png|gif|ico)$/,
