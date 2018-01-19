@@ -15,7 +15,7 @@ const entry = [
 
 const output = {
   path: path.resolve('docs'),
-  publicPath: '/',
+  publicPath: '/visualize-pi',
   filename: '[name].[chunkhash].js'
 };
 
