@@ -14,7 +14,7 @@ const entry = [
 ];
 
 const output = {
-  path: path.resolve('dist'),
+  path: path.resolve('docs'),
   publicPath: '/',
   filename: '[name].[chunkhash].js'
 };

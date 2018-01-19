@@ -26,7 +26,7 @@ webpack(config).run((error, stats) => {
 
   console.log('');
   console.log(chalk.bgGreen('                                                           '));
-  console.log(chalk.bgGreen('   App is compiled in production mode in /dist directory   '));
+  console.log(chalk.bgGreen('   App is compiled in production mode in /docs directory   '));
   console.log(chalk.bgGreen('                                                           '));
   console.log('');
 });

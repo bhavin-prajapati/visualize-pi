@@ -7,13 +7,16 @@ class DigitVisualizer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      renderVisualizer: false,
       numDigits: 100,
       digitColors: ['#FFFFFF', '#E8E8E8', '#D3D3D3', '#BEBEBE', '#A8A8A8', '#888888', '#696969', '#505050', '#303030', '#000000'],
-      gridSize: 20
+      gridSize: 500
     };
 
     this.handleNumDigitChange = this.handleNumDigitChange.bind(this);
+    this.handleSquareChange = this.handleSquareChange.bind(this);
     this.handleDigitColorChange = this.handleDigitColorChange.bind(this);
+    this.handleRenderClick = this.handleRenderClick.bind(this);
   }
 
   handleNumDigitChange(event) {
@@ -21,16 +24,32 @@ class DigitVisualizer extends React.Component {
   }
 
   handleSquareChange(event) {
-    this.setState({ gridSize: event.target.gridSize });
+    this.setState({ gridSize: parseInt(event.target.value, 10) });
   }
 
   handleDigitColorChange(event) {
     const newDigitColors = this.state.digitColors;
     newDigitColors[event.target.name] = event.target.value;
-    this.setState({ digitColor: newDigitColors });
+    this.setState({ digitColors: newDigitColors });
+  }
+
+  handleRenderClick() {
+    this.setState({ renderVisualizer: true });
   }
 
   render() {
+    console.log('render', this.state);
+    let newVisualizer = null;
+
+    if (this.state.renderVisualizer) {
+      console.log('new Visualizer');
+      newVisualizer = (<P5Wrapper
+        sketch={sketchVisualizer}
+        numDigits={this.state.numDigits}
+        digitColors={this.state.digitColors}
+        gridSize={this.state.gridSize} />);
+    }
+
     return (
       <div>
         <div className={s.visualizerInput}>
@@ -47,11 +66,8 @@ class DigitVisualizer extends React.Component {
           <span> 8: <input type="text" name="8" value={this.state.digitColors[8]} onChange={this.handleDigitColorChange} /></span>
           <span> 9: <input type="text" name="9" value={this.state.digitColors[9]} onChange={this.handleDigitColorChange} /></span>
         </div>
-        <P5Wrapper
-          sketch={sketchVisualizer}
-          numDigits={this.state.numDigits}
-          digitColors={this.state.digitColors}
-          gridSize={this.state.gridSize} />
+        <button onClick={this.handleRenderClick}>Render</button>
+        <div>{ newVisualizer }</div>
       </div>
     );
   }

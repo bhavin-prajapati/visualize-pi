@@ -17,7 +17,7 @@ A simple PI Visualizer to discover patterns
 
 ``npm start`` - start application in development mode
 
-``npm run build`` - build application into `/dist` directory
+``npm run build`` - build application into `/docs` directory
 
 ``npm run eslint`` - run eslint
 
