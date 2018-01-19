@@ -13,9 +13,11 @@ const entry = [
   path.resolve(__dirname, 'src/index')
 ];
 
+const projectName = 'visualize-pi';
+
 const output = {
   path: path.resolve('docs'),
-  publicPath: '/visualize-pi',
+  publicPath: `/${projectName}`,
   filename: '[name].[chunkhash].js'
 };
 
@@ -55,8 +57,8 @@ const plugins = [
     inject: true
   }),
   new CopyPlugin([
-    { from: 'src/locales', to: 'locales' },
-    { from: 'src/assets/images', to: 'images' }
+    { from: 'src/locales', to: `${projectName}/locales` },
+    { from: 'src/assets/images', to: `${projectName}/images` }
   ]),
   new FaviconsPlugin('./src/assets/favicon.png'),
   new UglifyJsPlugin()

@@ -12,9 +12,11 @@ const entry = [
   path.resolve(__dirname, 'src/index')
 ];
 
+const projectName = 'visualize-pi';
+
 const output = {
   path: path.resolve('docs'),
-  publicPath: '/',
+  publicPath: `/${projectName}`,
   filename: 'bundle.js'
 };
 
