@@ -17,6 +17,8 @@ const sketch = (p) => {
     numDigits = props.numDigits;
     digitColors = props.digitColors;
     gridSize = props.gridSize;
+    pi = props.pi;
+    console.log(pi);
     //p.draw();
   };
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import P5Wrapper from 'react-p5-wrapper';
 import sketchVisualizer from './sketch';
+import pi from '../../utils/pi';
 import s from './styles.css';
+
 
 class DigitVisualizer extends React.Component {
   constructor(props) {
@@ -10,7 +12,8 @@ class DigitVisualizer extends React.Component {
       renderVisualizer: false,
       numDigits: 100,
       digitColors: ['#FFFFFF', '#E8E8E8', '#D3D3D3', '#BEBEBE', '#A8A8A8', '#888888', '#696969', '#505050', '#303030', '#000000'],
-      gridSize: 500
+      gridSize: 500,
+      pi
     };
 
     this.handleNumDigitChange = this.handleNumDigitChange.bind(this);
@@ -47,7 +50,9 @@ class DigitVisualizer extends React.Component {
         sketch={sketchVisualizer}
         numDigits={this.state.numDigits}
         digitColors={this.state.digitColors}
-        gridSize={this.state.gridSize} />);
+        gridSize={this.state.gridSize}
+        gridSize={this.state.gridSize}
+        pi={this.state.pi} />);
     }
 
     return (
