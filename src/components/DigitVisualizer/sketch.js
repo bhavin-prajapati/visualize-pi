@@ -7,7 +7,6 @@ const sketch = (p) => {
   let gridSize = 500;
   let numDigits = 100;
   let digitColors = ['#FFFFFF', '#E8E8E8', '#D3D3D3', '#BEBEBE', '#A8A8A8', '#888888', '#696969', '#505050', '#303030', '#000000'];
-  let PI = pi;
 
   p.setup = function () {
     console.log('setup');
@@ -22,8 +21,8 @@ const sketch = (p) => {
     digitColors = props.digitColors;
     gridSize = props.gridSize;
 
-    console.log(PI);
     console.log(digitColors);
+    console.log(pi);
   };
 
   p.draw = function () {
